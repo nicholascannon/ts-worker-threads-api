@@ -93,7 +93,7 @@ I didn't average these results or do a rigorous statistical analysis, so it's ju
   > If the pool has already started to execute the task, you cannot cancel it anymore, though.
 
   This means if our pool accepts a really large job, if the request times out, the pool will still be working on that job.
-  You might be able to put a timeout in the worker though but anytime spent working on a job after the client has ended the request is a waste (this also goes for any work submitted in the `simple-threads` endpoint, see the TODO at the end of this readme).
+  You might be able to put a timeout in the worker though but any time spent working on a job after the client has ended the request is a waste (this also goes for any work submitted in the `simple-threads` endpoint, see the TODO at the end of this readme).
 
 - You need to set the pool size upfront.
 
@@ -115,3 +115,9 @@ time curl http://localhost:8080/fibonacci/pool-threads/100
 ```
 
 The behaviour is identical to just `awaiting` an async function.
+
+## TODO stuff
+
+- Add in a worker timeout to kill long running jobs
+- Figure out how to kill running jobs in the pool after client termination
+- Figure out how to kill worker in `simple-threads` when client closes connection
