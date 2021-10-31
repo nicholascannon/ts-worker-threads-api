@@ -1,13 +1,11 @@
-# Threads.js API example
-
-_How not to block the event-loop_
+# How not to block the damn event-loop
 
 A simple multi-threaded Fibonacci API using [Threads.js](https://threads.js.org/).
 
 ## The API
 
 ```
-http://localhost:8080/fibonacci/no-threads/<n>
+http://localhost:8080/fibonacci/<no | simple | pool>-threads/<n>
 ```
 
 Where `n` is the nth Fibonacci number.
