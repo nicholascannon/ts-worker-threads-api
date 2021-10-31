@@ -8,5 +8,5 @@
     "outDir": "./dist",
     "skipLibCheck": true
   },
-  "include": ["./src/**/*.ts", "src/utils/run-ts-worker.js"]
+  "include": ["./src/**/*.ts"]
 }
