@@ -12,6 +12,15 @@ http://localhost:8080/fibonacci/no-threads/<n>
 
 Where `n` is the nth Fibonacci number.
 
+## How can I run the server?
+
+Pretty easily:
+
+1. clone repo
+1. `npm i`
+1. `npm run dev` or `npm run build && node dist/index.js`
+1. run some of the example curls in this readme with 2 terminals
+
 ## A blocking example
 
 Curling the `no-threads` endpoint with a large fibonacci job **blocks all other requests**:
